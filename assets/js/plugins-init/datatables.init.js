@@ -72,6 +72,60 @@
     this.nodes().to$().removeClass('selected')
     });
 
+	// dup 1
+	var dup1 = $('#dup1').DataTable({
+		createdRow: function (row, data, index) {
+			$(row).addClass('selected')
+		},
+		language: {
+			paginate: {
+				next: '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
+				previous: '<i class="fa fa-angle-double-left" aria-hidden="true"></i>'
+			}
+		}
+	});
+
+	dup1.on('click', 'tbody tr', function () {
+		var $row = dup1.row(this).nodes().to$();
+		var hasClass = $row.hasClass('selected');
+		if (hasClass) {
+			$row.removeClass('selected')
+		} else {
+			$row.addClass('selected')
+		}
+	})
+
+	dup1.rows().every(function () {
+		this.nodes().to$().removeClass('selected')
+	});
+
+	// dup 2
+	var dup2 = $('#dup2').DataTable({
+		createdRow: function (row, data, index) {
+			$(row).addClass('selected')
+		},
+		language: {
+			paginate: {
+				next: '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
+				previous: '<i class="fa fa-angle-double-left" aria-hidden="true"></i>'
+			}
+		}
+	});
+
+	dup2.on('click', 'tbody tr', function () {
+		var $row = dup2.row(this).nodes().to$();
+		var hasClass = $row.hasClass('selected');
+		if (hasClass) {
+			$row.removeClass('selected')
+		} else {
+			$row.addClass('selected')
+		}
+	})
+
+	dup2.rows().every(function () {
+		this.nodes().to$().removeClass('selected')
+	});
+
 
 
     //example 2

@@ -27,13 +27,13 @@ class Auth extends CI_Controller {
                     );
                     $this->session->set_userdata( $array );
                     if($query['level'] == 'Admin'){
-                        $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Login Successfuly\',\'Happy logging in admin\')"');
+                        $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Login Successfully\',\'Happy logging in admin\')"');
                         redirect(base_url('admin/dashboard'));
                     } elseif ($query['level'] == 'Employee') {
-                        $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Login Successfuly\',\'Happy logging in employee\')"');
+                        $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Login Successfully\',\'Happy logging in employee\')"');
                         redirect(base_url('employee/dashboard'));
                     } elseif ($query['level'] == 'Student') {
-                        $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Login Successfuly\',\'Happy logging in student\')"');
+                        $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Login Successfully\',\'Happy logging in student\')"');
                         redirect(base_url('student/dashboard'));
                     } 
                 } else {
