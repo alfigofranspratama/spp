@@ -1,0 +1,324 @@
+.chat-body{
+	@include respond ('phone-land'){
+		min-height:auto!important;
+	}
+}
+.chat-wrapper{
+	display:flex;
+	overflow:hidden;
+	position: relative;
+	.chat-left-sidebar{
+		width:320px;
+		min-width:320px;
+		@include transitionFast;
+		.chat-fix-search{
+			padding: 12px 20px;
+			border-bottom: 1px solid $border-color;
+			border-right: 1px solid $border-color;
+			img{
+				height: 42px;
+				width: 42px;
+			}
+			.message-search-area{
+				.form-control{
+					border-right:0;
+					height: 42px;
+					border-top-left-radius: 42px;
+					border-bottom-left-radius: 42px;
+				}
+				.input-group-text{
+					height: 42px;
+					background:transparent;
+					border-left:0;
+					border:1px solid $border-color;
+					border-top-right-radius: 42px;
+					border-bottom-right-radius: 42px;
+					i{
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		@include respond ('tab-land'){
+			width:280px;
+			min-width:280px;
+		}
+	}
+	.chart-right-sidebar{
+		flex:1;
+	}
+	.chat-box-header{
+		padding: 12px 20px;
+		.main-img{
+			height: 42px;
+			width: 42px;
+		}
+	}
+	.chat-hamburger{
+		display:none;
+	}
+	.chat{
+		display:none;
+		&.active-chat{
+			display:block;
+		}
+	}
+	@include respond ('phone-land'){
+		.chat-left-sidebar{
+			position:absolute;
+			left: -280px;
+			background: #fff;
+			z-index: 5;
+			&.show{
+				left:0;
+			}
+		}
+		.chat-hamburger{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position:absolute;
+			height:45px;
+			width:45px;
+			line-height:45px;
+			text-align:center;
+			background-color:$secondary;
+			color:#fff;
+			border-radius:50%;
+			right: 10px;
+			top: 75px;
+			z-index: 5;
+			span{
+				display:block;
+				height:2px;
+				margin:2px auto;
+				width:20px;
+				border-radius:3px;
+				background-color:#fff;
+			}
+		}
+	}
+}
+
+
+//message box
+
+.message-bx{
+	.tab-content{
+		height:624px;
+		@include respond ('phone-land'){
+			height: calc(100vh - 380px);
+		}
+	}
+	.image-bx{
+		position:relative;
+		display:inline-block;
+		.img-1{
+			width:42px;
+			height:42px;
+			height:42px;
+			@include respond ('phone'){
+				height:45px;
+				width:45px;
+			}
+		}
+		span.active{
+			position: absolute;
+			bottom: -2px;
+			right: 1px;
+			height: 12px;
+			width: 12px;
+			background:$success;
+			border:2px solid $white;
+			border-radius:3rem;
+			@include respond ('phone'){
+				bottom: 0px;
+				right: 0px;
+				height: 15px;
+				width: 15px;
+				border: 3px solid $white;
+			}
+		}
+	}
+	p{
+		font-size:14px;
+		@include respond ('tab-land'){
+			font-size:12px;
+		}
+	}
+}
+
+
+//chat box
+.chat-box{
+	.message-sent {
+		width: 62%;
+		text-align:right;
+		p{
+			background:#8850FF;
+			text-align:left;
+			border-radius:$radius $radius 0 $radius;
+			padding:10px 20px;
+			color:$white;
+			font-size: 14px;
+			font-weight:300;
+			display: inline-block;
+		}
+		span{
+			display:block;
+		}
+		@include respond ('phone'){
+			width:100%;
+			/* p{
+				padding: 5px 8px;
+				font-size:12px;
+			} */
+		}
+	}
+	.message-received{
+		width: 62%;
+		text-align:left;
+		p{
+			background:$white;
+			text-align:left;
+			font-size:14px;
+			display: inline-block;
+			border-radius:0 $radius $radius $radius;
+			padding:10px 20px;
+			color:$black;
+			font-weight:400;
+			box-shadow:0 0 10px 2px rgba(0, 0, 0, .1);
+		}
+		span{
+			display:block;
+		}
+		@include respond ('phone'){
+			width:100%;
+			/* p{
+				font-size:12px;
+				padding: 5px 8px;
+			} */
+		}
+	}	
+	.type-massage{
+		margin: 15px 15px;
+		padding:5px;
+		border-radius:$radius;
+		border-width: 1px!important;
+		border-style: dashed!important;
+		.form-control{
+			border: 0;
+			height: 43px;
+			resize: none;
+			padding: 10px;
+		}
+		.btn:focus{
+			box-shadow:none;
+		}
+		.send-btn{
+			border-radius:$radius;
+			padding: 10px 18px;
+		}
+		@include respond ('phone'){
+			margin: 5px 15px 15px;
+			padding: 5px 8px;
+			textarea{
+				font-size:12px;
+				padding: 11px 5px;
+				height: 40px;
+			}
+		}
+	}
+	.title-nm{
+		font-size:20px;
+		@include respond ('tab-land'){
+			font-size:16px;
+		}
+	}
+}
+
+//chat-box-area
+.chat-box-area{	
+	position:relative;
+	padding: 20px 20px;
+    background: #f1f1f1;
+	z-index:1;
+	height:630px;
+	background-size: 30%;
+    background-position: bottom;
+	@include respond ('phone-land'){
+		height: calc(100vh - 380px);
+	}
+}
+
+//chat-list-area
+.chat-list-area{
+	@include transitionMedium;
+	padding: 20px 20px;
+	cursor:pointer;
+	.image-bx{
+		float:left;
+		margin-right: 10px;
+	}
+	p{
+		margin-bottom:0;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	
+	&.active{
+		background:var(--rgba-primary-1);
+	}
+	&:hover{
+		background:#f7f7f7;
+	}
+	@include respond ('tab-land'){
+		.user-name{
+			font-size:14px!important;
+		}
+	}
+	@include respond ('phone'){
+		padding: 15px 15px;
+	}
+}
+
+.card-tabs{
+	.nav-tabs.style-3{
+		border-bottom:3px solid $border-color;
+		.nav-link{
+			font-size:14px;
+			border:0;
+			margin-bottom:-2px;
+			border-radius: 0;
+			position:relative;
+			padding: 12px 20px;
+			@include transitionMedium;
+			&:after{
+				position:absolute;
+				left:50%;
+				transform:translateX(-50%);
+				bottom:0;
+				content:"";
+				border-radius:5px;
+				height:3px;
+				width:0px;
+				background:var(--primary);
+				@include transitionMedium;
+			}
+			@include respond('tab-land'){
+				padding:12px 14px;
+			}
+			
+			&.active{
+				background:transparent;
+				color:var(--primary);
+				&:after{
+					width:100%;
+				}
+			}
+		}
+	}
+}
+

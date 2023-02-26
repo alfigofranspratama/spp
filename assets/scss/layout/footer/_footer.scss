@@ -1,0 +1,20 @@
+
+
+
+.footer {
+    padding-left: 17.5rem;
+    background-color:$white;
+    .copyright {
+        padding: 0.9375rem;
+        p {
+            text-align: center;
+            margin: 0;
+        }
+
+        a{
+            color: var(--primary);
+        }
+    }
+}
+
+

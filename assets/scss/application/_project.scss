@@ -1,0 +1,136 @@
+.project-list-group{
+	.card{
+		margin-bottom: 17px;
+		border: 1px solid;
+		border-style: dashed;
+		border-width: 2px;
+		border-color: transparent;
+		&:hover{
+			border-color: #cccccc;
+		}
+	}
+}
+.project-media{
+	img{
+		height:48px;
+		width:48px;
+		border-radius:50px;
+		@include respond ('phone'){
+			height:44px;
+			width:44px;
+		}
+	}
+	.img-placeholder{
+		height:48px;
+		width:48px;
+		border-radius:50px;
+		line-height:48px;
+		font-weight: 600;
+		font-size:20px;
+		text-align:center;
+		display:inline-block;
+	}
+}
+.project-info{
+	padding: 5px 15px;
+	flex-flow: wrap;
+	display: flex;
+	align-items: center;
+	@include custommq($max: 1600px) {
+		font-size: 13px;
+		h5{
+			font-size:15px;
+		}
+	}
+	@include respond ('phone'){
+		padding: 10px 0px;
+	}
+}
+
+.project-nav{
+	margin-bottom:30px;
+	border-bottom:2px solid $border-color;
+	display: flex;
+	flex-wrap:wrap;
+    justify-content: space-between;
+	align-items: center;
+	padding-bottom: 20px;
+	@include respond ('tab-land'){
+		 margin-bottom: 20px;
+		 padding-bottom: 20px;
+	}
+	@include respond ('phone-land'){
+		display:block;
+	}
+	@include respond ('phone'){
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+.power-ic{
+	i{
+		font-size: 34px;
+		height: 48px;
+		width: 48px;
+		text-align: center;
+		line-height: 48px;
+		border-radius: 50px;
+		color: white;
+		font-weight: bold;
+		background:var(--primary);
+	}
+	@include respond ('phone'){
+		i{
+			font-size: 24px;
+			height: 44px;
+			width: 44px;
+			line-height:44px;
+		}
+	}
+}
+
+.project-status {
+    justify-content: space-between;
+}
+
+.project-card{
+	.dz-media{
+		height:80px;
+		width:80px;
+		min-width:80px;
+		border-radius:$radius;
+		overflow:hidden;
+		img{
+			height:100%;
+		}
+	}
+	.border-bx{
+		border: 1px solid;
+		padding: 7px 13px;
+		border-radius:$radius;
+		border-color:#c1c1c1;
+		border-style: dashed;
+	}
+}
+.dt-icon{
+	height:45px;
+	width:45px;
+	min-width: 45px;
+	border-radius:$radius;
+	line-height:45px;
+	text-align:center;
+}
+
+.users-lg {
+    display: flex;
+	li{
+		margin-right: -10px;
+		img{
+			height: 40px;
+			width: 40px;
+			border-radius: 45px;
+			border: 2px solid #fff;
+		}
+	}
+}

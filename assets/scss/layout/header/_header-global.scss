@@ -1,0 +1,246 @@
+/////////////////
+// Header
+/////////////////
+.header {
+    // width: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 0rem;
+    z-index: 4;
+    // box-shadow: 0 0 1rem $l-border;
+    padding-left: 17.5rem;
+    transition: all .2s ease;
+	background:var(--headerbg);
+	box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.05);
+	
+    // &::before {
+    //     content: "";
+    //     height: 168px;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     position: absolute;
+    //     z-index: 997;
+    //     background: rgba(116, 104, 240,0.85)
+    // }
+    .header-content {
+        height: 100%;
+    }
+    .navbar {
+		height: 4.5rem;
+        padding: 0 40px;
+        width: 100%;
+        .navbar-collapse {
+            height: 100%;
+            width: 100%;
+        }
+		@include custommq($max:1023px) {
+			padding-left:145px;
+		}
+		@include respond ('phone'){
+			padding:0 15px;
+		}
+    }
+	
+	
+	.sub-header{
+		padding: 5px 40px;
+		height:3rem;
+		display:flex;
+		background-color: #fff;
+		align-items:center;
+		border-top: 1px solid $border-color;
+		.dashboard_bar {
+			font-size: 18px;
+			font-weight: 500;
+			color: #000;
+			margin-bottom: 0;
+		}
+		@include respond ('phone'){
+			padding:5px 15px;
+		}
+	}
+}
+
+////////////////////////
+// CSS Pulse Effect
+////////////////////////
+@mixin circle($circleSize) {
+    width: $circleSize;
+    height: $circleSize;
+    border-radius: $circleSize/2;
+}
+
+
+/* pulse in SVG */
+
+svg.pulse-svg {
+    overflow: visible;
+    .first-circle {
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation: pulse-me 3s linear infinite;
+        animation: pulse-me 3s linear infinite;
+        fill: var(--primary);
+    }
+    .second-circle {
+        @extend .first-circle;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+    .third-circle {
+        @extend .first-circle;
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+    }
+}
+
+
+/* pulse in CSS */
+
+.pulse-css {
+    @include circle(1rem);
+    border-radius: 3.5rem;
+    height: 12px;
+    position: absolute;
+    background: var(--primary);
+	right: 5px;
+    top: 8px;
+	border:2px solid $white;
+    width: 12px;
+    &:after,
+    &:before {
+        content: '';
+        @include circle(1rem);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -.2rem;
+        background-color: var(--primary);
+        margin: auto;
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation: pulse-me 3s linear infinite;
+        animation: pulse-me 3s linear infinite;
+        @at-root [direction="rtl"] & {
+            left: auto;
+            right: -.2rem;
+        }
+    }
+	@include respond ('laptop'){
+		height:16px;
+		width:16px;
+	}
+}
+
+@-webkit-keyframes pulse-me {
+    0% {
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.09;
+    }
+    100% {
+        -webkit-transform: scale(3);
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse-me {
+    0% {
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.09;
+    }
+    100% {
+        -webkit-transform: scale(3);
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+[data-sidebar-style="full"],
+[data-sidebar-style="overlay"] {
+    .header {
+        width: 100%;
+        @include custommq($max: 1350px) {
+            width: 100%;
+            padding-left: 17rem;
+        }
+        @include custommq($max: 1023px) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}
+
+[data-sidebar-style="mini"] {
+    .header {
+        width: 100%;
+        padding-left: 5rem;
+    }
+}
+
+[data-sidebar-style="compact"] {
+    .header {
+        width: 100%;
+        padding-left: 11.25rem;
+		.header-content{
+			//padding-left: 1.875rem;
+		}
+    }
+}
+
+[data-header-position="fixed"] {
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .content-body {
+        padding-top: 7.5rem;
+		
+    }
+    .deznav {
+        margin-top: 0;
+    }
+}
+[data-sidebar-style="compact"][data-header-position="fixed"][data-container="boxed"][data-layout="vertical"] {
+    .header {
+        width: 1199px;
+    }
+}
+[data-sidebar-style="modern"] {
+    .header {
+		width: 100%;
+		padding-left: 9.5rem;
+    
+
+    }
+	&[data-layout="horizontal"] {
+		.nav-header .brand-logo{
+		    justify-content: start;
+		}
+		.header .header-content{
+            padding-left: 30px;
+			
+        }
+	}
+}

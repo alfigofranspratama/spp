@@ -1,0 +1,84 @@
+.profile-wrapper{
+	.profile-img{
+		height: 150px;
+		width: 150px;
+		min-width:150px;
+		display:inline-block;
+		border-radius:$radius;
+		img{
+			height:100%;
+			width:100%;
+			object-fit:cover;
+			border-radius:$radius;
+		}
+		&.active{	
+			position:relative;
+			&:after{
+				content:"";
+				position:absolute;
+				right: -5px;
+				top: -5px;
+				border-radius:50%;
+				border:3px solid $white;
+				height:18px;
+				width:18px;
+				background:$success;
+			}
+		}
+	}
+	.user-list-detail{
+		display:flex;
+		li{
+			padding-right: 12px;
+			margin-right: 12px;
+			border-right: 1px solid $border-color;
+			&:last-child{
+				border-right:0;
+			}
+			svg{
+				width: 20px;
+				fill: rgba(0, 23, 55, 0.08);
+			}
+		}
+	}
+}
+
+.user-states-info{
+	background:#f7f7f7;
+	border-radius:$radius;
+	text-align:center;
+	padding: 15px 10px;
+    border: 1px solid #dedede;
+    border-style: dashed;
+	.user-states-info-name{
+		font-size: 16px;
+		color: black;
+		font-weight: 600;
+		display:block;
+	}
+	.user-states-value{
+		font-size: 15px;
+	}
+}
+//progress bar gradient
+.default-progress{
+	height:20px;
+	.progress-bar{
+		border-radius:20px;
+	}
+	.progress-title{
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		font-size: 14px;
+		padding: 0 15px;
+	}
+}
+
+.bg-gradient-1{
+	background: rgb(172,57,212);
+	background: -moz-linear-gradient(left,  rgba(172,57,212,1) 0%, rgba(240,76,243,1) 100%);
+	background: -webkit-linear-gradient(left,  rgba(172,57,212,1) 0%,rgba(240,76,243,1) 100%); 
+	background: linear-gradient(to right,  rgba(172,57,212,1) 0%,rgba(240,76,243,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ac39d4', endColorstr='#f04cf3',GradientType=1 ); 
+}

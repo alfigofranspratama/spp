@@ -1,0 +1,445 @@
+:root{
+	--nav-headbg: #fff;
+	--sidebar-bg: #fff;
+	--headerbg: #fff;
+}
+
+//background for nav header
+@each $name, $color in $theme_backgrounds {
+	[data-nav-headerbg="#{$name}"][data-theme-version="dark"],
+    [data-nav-headerbg="#{$name}"] {
+        @if $name != "color_1"  {
+			--nav-headbg: #{$color};
+			
+			.nav-header{
+				.svg-logo-path{
+					fill:#fff;
+				}
+				.svg-logo-rect {
+					fill: #fff;
+				}
+				.logo-abbr{
+					.svg-logo-path{
+						fill:$color;
+					}
+				}
+				.hamburger .line{
+					background:#fff;
+				}
+			}
+			&[data-sidebar-style="modern"]{
+				.hamburger .line{
+					background:#000;
+				}
+			}
+			
+		}
+	}
+}
+//background for nav header
+@each $name, $color in $theme_backgrounds {
+	[data-sibebarbg="#{$name}"][data-theme-version="dark"],
+    [data-sibebarbg="#{$name}"] {
+        @if $name != "color_1"  {
+			--sidebar-bg: #{$color};
+			
+			.nav-label{
+				border-color:rgba($white,0.1);
+				color:rgba($white,0.4);
+			}
+			.deznav{
+				.main-profile{
+					.name{
+						color:#fff;
+					}
+					.email{
+						color:rgba($white,0.5);
+					}
+					.image-bx a {
+						color:#fff;
+					}
+				} 
+				.copyright{
+					color:rgba($white,0.5);
+				}
+				.metismenu{
+					a{
+						color:rgba($white,0.7);
+					}
+					ul{
+						a{
+							&:before{
+								border-color:rgba($white,0.7);
+							}
+							&:hover,
+							&:focus,
+							&.mm-active{
+								color:#fff;
+								background-color: lighten($color: $color, $amount: 3%);
+								&:before{
+									border-color:#fff;
+								}
+							}
+						}
+					}
+					&>li{
+						&>a{
+							i{
+								color:lighten($color: $color, $amount: 35%);
+							}
+						}
+						&:hover,
+						&:focus{
+							&>a{
+								color:#fff;
+								background-color: lighten($color: $color, $amount: 3%);
+							}
+						}
+						&.mm-active{
+							&>a{
+								color:#fff;
+								background-color: lighten($color: $color, $amount: 8%);
+								i{
+									color:#fff;									
+								}
+							}
+						}
+					}
+				} 
+			}
+			&[data-sidebar-style="full"][data-layout="vertical"]{
+				.deznav .metismenu>li>a:before {
+					background-color: lighten($color: $color, $amount: 60%);
+				}
+				.menu-toggle{
+					.deznav{
+						.metismenu{
+							a{
+								color:#888ea8;
+							}
+							ul{
+								a{
+									&:hover,
+									&:focus,
+									&.mm-active{
+										color:$color;
+										background-color:transparent;
+									}
+								}
+							}
+							&>li{
+								&.mm-active,
+								&:hover{
+									&>a{
+										background:lighten($color: $color, $amount: 10%);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&[data-sidebar-style="mini"][data-layout="vertical"]{
+				.deznav{
+					.metismenu{
+						a{
+							color:#888ea8;
+						}
+						ul{
+							a{
+								&:hover,
+								&:focus,
+								&.mm-active{
+									color:$color;
+									background-color:transparent;
+								}
+							}
+						}
+						&>li{
+							&>a{
+								&:before{
+									background:#fff;
+								}
+							}
+							&:hover{
+								&>a{
+									i{
+										color:#fff;
+									}
+								}
+							}
+							&.mm-active{
+								&>a{
+									color:#fff;
+									background:lighten($color: $color, $amount: 10%);
+									i{
+										color:#fff;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			&[data-sidebar-style="compact"][data-layout="vertical"]{
+				.deznav{
+					.metismenu{
+						&>li{
+							a{
+								color:rgba($white,.7);
+							}
+							&>a{
+								i{
+									background:lighten($color: $color, $amount: 3%);
+								}
+							}
+							&:hover{
+								&>a{
+									background-color:transparent;
+								}
+							}
+							&.mm-active{
+								&>a{
+									background-color:transparent;
+									i{
+										background:lighten($color: $color, $amount: 10%);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&[data-sidebar-style="modern"][data-layout="vertical"]{
+				.deznav{
+					.metismenu{
+						a{
+							color:#888ea8;
+						}
+						ul{
+							a{
+								&:hover,
+								&:focus,
+								&.mm-active{
+									color:$color;
+									background-color:transparent;
+								}
+							}
+						}
+						&>li{
+							&>a{
+								color:rgba($white,0.7);
+							}
+							&:hover{
+								&>a{	
+									i{
+										color:#fff;
+									}
+								}
+							}
+							&.mm-active{
+								&>a{
+									color:#fff;
+								}
+							}
+						}
+					}
+				}
+			}
+			&[data-sidebar-style="overlay"][data-layout="vertical"]{
+				.deznav{
+					.metismenu{
+						&>li{
+							&>a{
+								color:rgba($white,0.7);
+							}
+							&.mm-active,
+							&:hover{
+								&>a{
+									box-shadow:none;
+								}
+							}
+						}
+					}
+				}
+			}
+			&[data-sidebar-style="icon-hover"][data-layout="vertical"]{
+				.deznav{
+					.metismenu{
+						&>li{
+							&:hover{
+								&>a{
+									background-color: lighten($color: $color, $amount: 3%);
+									box-shadow:none;
+								}
+							}
+							&.mm-active{
+								&>a{
+									background-color: lighten($color: $color, $amount: 8%);
+									box-shadow:none;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			&[data-layout="horizontal"]{
+				.deznav{
+					.metismenu{
+						a{
+							color:#888ea8;
+						}
+						ul{
+							a{
+								&:hover,
+								&:focus,
+								&.mm-active{
+									color:$color;
+									background-color:transparent;
+									&:before{
+										border-color:$color;
+									}
+								}
+								&:before{
+									border-color:#888ea8;
+								}
+							}
+						}
+						&>li{
+							&>a{
+								border-color:lighten($color: $color, $amount: 15%);
+								color:rgba($white,0.7);
+							}
+							&.mm-active{
+								&>a{
+									background-color:transparent;
+									color:#fff;
+								}
+							}
+							&:hover{
+								&>a{
+									background-color:transparent;
+									i{
+										color:#fff;
+									}
+								}
+							}
+						}
+					}
+				}
+				&[data-sidebar-style="mini"]{
+					.deznav{
+						.metismenu{
+							&>li{
+								&.mm-active{
+									&>a{
+										background-color: lighten($color: $color, $amount: 10%);
+									}
+								}
+							}
+						}
+					}
+				}
+				&[data-sidebar-style="compact"]{
+					.deznav{
+						.metismenu{
+							&>li{
+								&.mm-active{
+									&>a{
+										background-color: lighten($color: $color, $amount: 10%);
+									}
+								}
+							}
+						}
+					}
+				}
+				&[data-sidebar-style="modern"]{
+					.deznav{
+						.metismenu{
+							&>li{
+								&.mm-active{
+									&>a{
+										background-color: lighten($color: $color, $amount: 10%);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+//background for nav header
+@each $name, $color in $theme_backgrounds {
+	[data-headerbg="#{$name}"][data-theme-version="dark"],
+    [data-headerbg="#{$name}"] {
+        @if $name != "color_1"  {
+			--headerbg: #{$color};
+			
+			.pulse-css{
+				background-color:lighten($color: $color, $amount: 80%);
+				&:after, &:before{
+					background-color:lighten($color: $color, $amount: 80%);
+				}
+			}
+			.header{
+				.header-left{
+					.search-area{
+						.form-control{
+							background:lighten($color: $color, $amount: 7%)!important;
+							color:#fff!important;
+							&::placeholder{
+								color:rgba($white,0.7);
+							}
+						}
+						.input-group-append .input-group-text{
+							background:lighten($color: $color, $amount: 7%)!important;
+							a{
+								color:rgba($white,0.7);
+							}
+						}
+					} 
+				}
+				.header-right{
+					.notification_dropdown {
+						.nav-link{
+							svg:not(#icon-full,#icon-minimize) path{
+								fill:lighten($color: $color, $amount: 60%);
+							}
+							svg{
+								&#icon-full,
+								&#icon-minimize{
+									path{
+										stroke:lighten($color: $color, $amount: 60%);
+									}
+								}
+							}
+							i{
+								color:lighten($color: $color, $amount: 60%);
+							}							
+						}
+					}
+					.header-profile{
+						&>a.nav-link{
+							border-color:lighten($color: $color, $amount: 10%);
+							.header-info{
+								span {
+									color:#fff;	
+								}
+								small{
+									color:rgba($white,0.6);
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+	}
+}
