@@ -30,7 +30,7 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th></th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -63,7 +63,7 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th></th>
+                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -93,7 +93,7 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th></th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -126,7 +126,7 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th></th>
+                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -156,7 +156,7 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th></th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -189,7 +189,7 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th></th>
+                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>

@@ -119,7 +119,7 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                     <img src="<?= base_url('assets/') ?>images/profile/pic1.jpg" width="20" alt="" />
                                     <div class="header-info">
-                                        <span><?= $users['nama'] ?></span>
+                                        <span><?= $users['name'] ?></span>
                                         <small><?= $users['level'] ?></small>
                                     </div>
                                 </a>
@@ -138,7 +138,7 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
                                         </svg>
                                         <span class="ml-2">Inbox </span>
                                     </a>
-                                    <a href="<?= base_url('assets/') ?>page-login.html" class="dropdown-item ai-icon">
+                                    <a href="javascript:;"  class="dropdown-item ai-icon">
                                         <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                             <polyline points="16 17 21 12 16 7"></polyline>
@@ -159,6 +159,8 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
                         <?php
                         if ($this->uri->segment('2') == 'student' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('admin/student/add') . '" class="mr-1">+ Add New Student</a>';
                         if ($this->uri->segment('2') == 'student' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/student') . '" class="mr-1"><- Back to Student data</a>';
+                        if ($this->uri->segment('2') == 'employee' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('admin/employee/add') . '" class="mr-1">+ Add New Employee</a>';
+                        if ($this->uri->segment('2') == 'employee' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/employee') . '" class="mr-1"><- Back to Employee data</a>';
                         ?>
                     </div>
                 </div>
