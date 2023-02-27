@@ -20,6 +20,12 @@
                             <li><a href="<?= base_url('admin/student') ?>">Student</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a class="ai-icon" href="<?= base_url('admin/grade') ?>">
+                            <i class="flaticon-149-diagram"></i>
+                            <span class="nav-text">Grade</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
