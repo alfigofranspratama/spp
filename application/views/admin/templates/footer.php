@@ -88,6 +88,25 @@
         return false;
     });
 </script>
+<script>
+    $('.logout').on('click', function() {
+        var url = $(this).attr('href');
+        Swal.fire({
+            title: "Are you sure to log out ?",
+            text: "You must input username or email address and password to login again !!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, Log Out !!",
+
+        }).then(result => {
+            if (result.value) {
+                window.location.href = url;
+            }
+        })
+        return false;
+    });
+</script>
 
 
 </body>

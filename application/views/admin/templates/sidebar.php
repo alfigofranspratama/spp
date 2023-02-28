@@ -18,6 +18,7 @@
                         <ul aria-expanded="false">
                             <li><a href="<?= base_url('admin/employee') ?>">Employee</a></li>
                             <li><a href="<?= base_url('admin/student') ?>">Student</a></li>
+                            <li><a href="<?= base_url('admin/studentaccount') ?>">Student Account</a></li>
                         </ul>
                     </li>
                     <li>

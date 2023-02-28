@@ -50,6 +50,50 @@ class Auth extends CI_Controller {
         
     }
 
+    public function logout()
+    {
+        $this->session->unset_userdata('users');
+        redirect(base_url(''));
+    }
+
+    public function signup()
+    {
+        $this->form_validation->set_rules('nisn', 'NISN', 'trim|required|callback_nisn_check',);
+        $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|is_unique[tb_users.email_address]|valid_email');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[tb_users.username]');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]');
+        
+        if ($this->form_validation->run() == FALSE) {
+            $data['title'] = 'Sign Up';
+            $this->load->view('auth/signup', $data, FALSE);
+        } else {
+            
+        }
+        
+        
+    }
+
+    public function mail()
+    {
+        $this->load->view('email_signup');
+        
+    }
+
+
+    public function nisn_check($str)
+    {
+        $query = $this->db->query("SELECT * FROM student_data a LEFT JOIN tb_users b ON a.users_id = b.id_users WHERE a.nisn = '$str'")->row_array();
+        if ($query == null) {
+            $this->form_validation->set_message('nisn_check', '{field} not Registered');
+            return FALSE;
+        } else {
+            if($query['users_id'] != null){
+                $this->form_validation->set_message('nisn_check', 'The account has been registered using this {field}');
+                return FALSE;
+            }
+            return TRUE;
+        }
+    }
 }
 
 /* End of file Auth.php */

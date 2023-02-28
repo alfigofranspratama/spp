@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="vh-100" <?= $this->session->flashdata('message'); ?> >
+<body class="" style="height: 103vh;">
     <div class="authincation h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -33,29 +33,34 @@
                                     <div class="text-center mb-3">
                                         <img src="<?= base_url('assets/') ?>images/logo-full.png" alt="">
                                     </div>
-                                    <h4 class="text-center mb-4">Sign in your account</h4>
-                                    <form action="<?= base_url('auth') ?>" method="post">
+                                    <h4 class="text-center mb-4">Sign up your account</h4>
+                                    <form action="<?= base_url('auth/signup') ?>" method="POST">
                                         <div class="form-group">
-                                            <label class="mb-1"><strong>Username or Email Address</strong></label>
-                                            <input type="text" name="username-email" class="form-control" placeholder="example@spp.com">
+                                            <label class="mb-1"><strong>NISN Registered by the employee</strong></label>
+                                            <input type="text" class="form-control" name="nisn" value="<?= set_value('nisn') ?>" placeholder="ex : 123456xxx" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                            <?= form_error('nisn', '<small class="text-danger">', '</small>') ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Username</strong></label>
+                                            <input type="text" class="form-control" name="username" value="<?= set_value('username') ?>" placeholder="nana_mizuki">
+                                            <?= form_error('username', '<small class="text-danger">', '</small>') ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Email Address</strong></label>
+                                            <input type="text" class="form-control" name="email_address" value="<?= set_value('email_address') ?>" placeholder="nanamizuki@gmail.com">
+                                            <?= form_error('email_address', '<small class="text-danger">', '</small>') ?>
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" name="password" class="form-control" placeholder="*******">
+                                            <input type="password" name="password" value="<?= set_value('password') ?>" class="form-control" placeholder="*******">
+                                            <?= form_error('password', '<small class="text-danger">', '</small>') ?>
                                         </div>
-                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
-                                            <div class="form-group">
-                                            </div>
-                                            <div class="form-group">
-                                                <a href="#">Forgot Password?</a>
-                                            </div>
-                                        </div>
-                                        <div class="text-center">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                                        <div class="text-center mt-4">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign up</button>
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Don't have an account? <a class="text-primary" href="<?= base_url('auth/signup') ?>">Sign up</a></p>
+                                        <p>Already have an account? <a class="text-primary" href="<?= base_url('') ?>">Sign in</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +82,7 @@
     <script src="<?= base_url('assets/') ?>js/custom.min.js"></script>
     <script src="<?= base_url('assets/') ?>js/deznav-init.js"></script>
     <script>
-        function swal(icn,titles,texts) {
+        function swal(icn, titles, texts) {
             Swal.fire(
                 titles,
                 texts,
