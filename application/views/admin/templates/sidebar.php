@@ -26,6 +26,12 @@
                             <span class="nav-text">Grade</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="ai-icon" href="<?= base_url('admin/spp') ?>">
+                            <i class="flaticon-092-money"></i>
+                            <span class="nav-text">SPP</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
