@@ -165,6 +165,7 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
                         if ($this->uri->segment('2') == 'grade' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/grade') . '" class="mr-1"><- Back to Grade data</a>';
                         if ($this->uri->segment('2') == 'spp' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('admin/spp/add') . '" class="mr-1">+ Add New SPP</a>';
                         if ($this->uri->segment('2') == 'spp' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/spp') . '" class="mr-1"><- Back to SPP data</a>';
+                        if ($this->uri->segment('2') == 'transaction' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/transaction') . '" class="mr-1"><- Back to Transaction data</a>';
                         ?>
                     </div>
                 </div>
