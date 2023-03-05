@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Mar 2023 pada 02.00
+-- Waktu pembuatan: 05 Mar 2023 pada 15.42
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -44,9 +44,8 @@ CREATE TABLE `student_data` (
 --
 
 INSERT INTO `student_data` (`student_id`, `users_id`, `nisn`, `nis`, `class_id`, `address`, `phone`, `name`, `spp_id`) VALUES
-(2, NULL, '1234567890', '123456', 1, 'Tokyo', '081292389150', 'Nana Mizuki', 2),
 (3, NULL, '1029384756', '643211', 10, 'Osaka', '083193369236', 'Yuri Tsunematsu', 2),
-(4, NULL, '918273645', '535216', 17, 'Yokohama', '083186861394', 'Yuriko Yoshitaka', 2);
+(4, 5, '918273645', '535216', 17, 'Yokohama', '083186861394', 'Yuriko Yoshitaka', 2);
 
 -- --------------------------------------------------------
 
@@ -100,7 +99,7 @@ CREATE TABLE `tb_spp` (
 --
 
 INSERT INTO `tb_spp` (`id_spp`, `year`, `amount`) VALUES
-(2, 2023, 115000);
+(2, 2020, 110000);
 
 -- --------------------------------------------------------
 
@@ -127,7 +126,7 @@ INSERT INTO `tb_transaction` (`id_transaction`, `id_employee`, `nisn`, `paid_dat
 (1, 1, '1234567890', '2023-02-26', 'January', '2023', 2, 115000),
 (2, 1, '1234567890', '2023-02-27', 'February', '2023', 2, 115000),
 (3, 1, '1234567890', '2023-03-01', 'March', '2023', 2, 115000),
-(4, 1, '1234567890', '2023-03-01', 'April', '2023', 2, 115000);
+(4, 1, '918273645', '2023-03-01', 'April', '2023', 2, 115000);
 
 -- --------------------------------------------------------
 
@@ -149,7 +148,29 @@ CREATE TABLE `tb_users` (
 --
 
 INSERT INTO `tb_users` (`id_users`, `name`, `username`, `email_address`, `password`, `level`) VALUES
-(1, 'Admin SPP', 'admin', 'admin@spp.com', '$2y$10$2zSOwjgM9T5w8jiNGNdKSOjxIsdwfvFwVO9iSVflrnjoMlJ05xFmW', 'Admin');
+(1, 'Admin SPP', 'admin', 'admin@spp.com', '$2y$10$2zSOwjgM9T5w8jiNGNdKSOjxIsdwfvFwVO9iSVflrnjoMlJ05xFmW', 'Admin'),
+(5, 'Yuriko Yoshitaka', 'Yuriko Yoshitaka', 'alfigofranspratamaa@gmail.com', '$2y$10$hYEGAls.uYbH1RTGyLmgOuuv7HZ29ukzFKYOQyboswhbkLiEFG3aW', 'Student'),
+(6, 'Petugas', 'petugas', 'petugas@gmail.com', '$2y$10$W8j0HETlpBUJH8sLKEchfeab3f7ApLOFSGcDkGSqYjja03sL9Bir.', 'Employee');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `verify`
+--
+
+CREATE TABLE `verify` (
+  `crypt` varchar(100) NOT NULL,
+  `nisn` char(14) NOT NULL,
+  `status` int(11) NOT NULL,
+  `expired` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `verify`
+--
+
+INSERT INTO `verify` (`crypt`, `nisn`, `status`, `expired`) VALUES
+('18VvS96AiqzVg', '918273645', 1, '2023-03-06 08:27:05');
 
 --
 -- Indexes for dumped tables
@@ -186,6 +207,12 @@ ALTER TABLE `tb_users`
   ADD PRIMARY KEY (`id_users`);
 
 --
+-- Indeks untuk tabel `verify`
+--
+ALTER TABLE `verify`
+  ADD PRIMARY KEY (`crypt`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -217,7 +244,7 @@ ALTER TABLE `tb_transaction`
 -- AUTO_INCREMENT untuk tabel `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
