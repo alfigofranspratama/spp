@@ -37,7 +37,7 @@
                                     <form action="<?= base_url('auth') ?>" method="post">
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Username or Email Address</strong></label>
-                                            <input type="text" name="username-email" class="form-control" placeholder="example@spp.com">
+                                            <input type="text" required name="username-email" class="form-control" placeholder="example@spp.com">
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Password</strong></label>
