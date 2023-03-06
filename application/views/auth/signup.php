@@ -12,16 +12,42 @@
     <meta property="og:description" content="Zenix - Crypto Admin Dashboard" />
     <meta property="og:image" content="https://zenix.dexignzone.com/xhtml/social-image.png" />
     <meta name="format-detection" content="telephone=no">
-    <title>Login</title>
+    <title>SPP SMK NEgeri 4 Payakumbuh</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/') ?>images/favicon.png">
     <link href="<?= base_url('assets/') ?>vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>css/style.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <?= $script_captcha ?>
 
+    <style>
+        .btn-primary {
+            background-color: #065d98 !important;
+            border-color: #065d98 !important;
+            color: white !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #3183d4 !important;
+            border-color: #3183d4 !important;
+            color: #ddd !important;
+        }
+
+        a:hover {
+            color: #3183d4 !important;
+        }
+
+        a.text-primary {
+            color: #065d98 !important;
+        }
+
+        a.text-primary:hover {
+            color: #3183d4 !important;
+        }
+    </style>
 </head>
 
-<body class="" style="height: 103vh;" <?= $this->session->flashdata('message'); ?> >
+<body class="" style="height: 103vh;" <?= $this->session->flashdata('message'); ?>>
     <div class="authincation h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -31,7 +57,7 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <div class="text-center mb-3">
-                                        <img src="<?= base_url('assets/') ?>images/logo-full.png" alt="">
+                                        <img src="<?= base_url('assets/') ?>images/icon-navbar.png" height="100" alt="">
                                     </div>
                                     <h4 class="text-center mb-4">Sign up your account</h4>
                                     <form action="<?= base_url('auth/signup') ?>" method="POST">
@@ -54,6 +80,9 @@
                                             <label class="mb-1"><strong>Password</strong></label>
                                             <input type="password" name="password" value="<?= set_value('password') ?>" class="form-control" placeholder="*******">
                                             <?= form_error('password', '<small class="text-danger">', '</small>') ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <?= $captcha ?>
                                         </div>
                                         <div class="text-center mt-4">
                                             <button type="submit" class="btn btn-primary btn-block">Sign up</button>

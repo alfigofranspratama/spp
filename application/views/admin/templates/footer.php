@@ -10,7 +10,7 @@
         ***********************************-->
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2021</p>
+        <p>Copyright © Designed &amp; Developed by <a href="https://instagram.com/alfigofransp" class="copyrights" target="_blank">Alfigo Frans Pratama</a> 2023</p>
     </div>
 </div>
 <!--**********************************
@@ -51,14 +51,17 @@
 
 <!-- Dashboard 1 -->
 <script src="<?= base_url('assets/') ?>js/dashboard/dashboard-1.js"></script>
-
+<script src="<?= base_url('assets/') ?>vendor/jquery-asColor/jquery-asColor.min.js"></script>
+<script src="<?= base_url('assets/') ?>vendor/jquery-asGradient/jquery-asGradient.min.js"></script>
+<script src="<?= base_url('assets/') ?>vendor/jquery-asColorPicker/js/jquery-asColorPicker.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/plugins-init/jquery-asColorPicker.init.js"></script>
 <script src="<?= base_url('assets/') ?>vendor/owl-carousel/owl.carousel.js"></script>
 <script src="<?= base_url('assets/') ?>vendor/datatables/js/jquery.dataTables.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/plugins-init/datatables.init.js"></script>
 <script src="<?= base_url('assets/') ?>vendor/select2/js/select2.full.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/plugins-init/select2-init.js"></script>
 <script src="<?= base_url('assets/') ?>vendor/sweetalert2/dist/sweetalert2.min.js"></script>
-<script src="<?= base_url('assets/') ?>js/custom.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/custom.js"></script>
 <script src="<?= base_url('assets/') ?>js/deznav-init.js"></script>
 <script>
     function swal(icn, titles, texts) {

@@ -17,8 +17,12 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('username-email', 'Username or Email Address', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
+        $recaptcha = $this->input->post('g-recaptcha-response');
+        $response = $this->recaptcha->verifyResponse($recaptcha);
 
-        if ($this->form_validation->run() == FALSE) {
+        if ($this->form_validation->run() == FALSE || !isset($response['success']) || $response['success'] <> true) {
+            $data['captcha'] = $this->recaptcha->getWidget();
+            $data['script_captcha'] = $this->recaptcha->getScriptTag();
             $data['title'] = 'Login';
             $this->load->view('auth/login', $data, FALSE);
         } else {
@@ -676,9 +680,13 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|is_unique[tb_users.email_address]|valid_email');
         $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[tb_users.username]');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]');
-
-        if ($this->form_validation->run() == FALSE) {
+        $recaptcha = $this->input->post('g-recaptcha-response');
+        $response = $this->recaptcha->verifyResponse($recaptcha);
+        if ($this->form_validation->run() == FALSE || !isset($response['success']) || $response['success'] <> true) {
+            $data['captcha'] = $this->recaptcha->getWidget();
             $data['title'] = 'Sign Up';
+            $data['script_captcha'] = $this->recaptcha->getScriptTag();
+
             $this->load->view('auth/signup', $data, FALSE);
         } else {
             $nisn = $this->input->post('nisn');
@@ -1918,7 +1926,7 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('message', 'onload="swal(\'error\',\'Invalid Verify Link\',\'Please login again for resend link verification\')"');
             redirect(base_url(''));
         }
-    } 
+    }
 
     public function nisn_check($str)
     {

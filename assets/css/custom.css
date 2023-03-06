@@ -1,0 +1,126 @@
+::-moz-selection {
+    /* Code for Firefox */
+    color: #1197EC !important;
+    background: rgba(17, 151, 255, 0.20) !important;
+}
+
+::selection {
+    color: #1197EC !important;
+    background: rgba(17, 151, 255, 0.20) !important;
+}
+
+.deznav .metismenu>li.mm-active>a i {
+    color: #1197ff !important;
+}
+
+.deznav .metismenu>li.mm-active>a {
+    background: rgba(17, 151, 255, 0.20) !important;
+    color: #1197EC !important;
+}
+
+.deznav .metismenu ul a:hover {
+    background: rgba(17, 151, 255, 0.20) !important;
+    color: #1197EC !important;
+}
+
+.deznav .metismenu>li>a:before {
+    background-color: #1197ff !important;
+}
+
+.nav-header .brand-logo {
+    color: transparent;
+}
+
+.biru {
+    color: #1197ff !important;
+    font-size: 100%;
+}
+
+@media (max-width:950px) {
+    .biru {
+        display: none;
+    }
+}
+
+.deznav .metismenu>li>a i:after {
+    background-color: #1197ff !important;
+}
+
+.deznav .metismenu ul a.mm-active {
+    background: rgba(17, 151, 255, 0.20) !important;
+    /* background-color: #1197ff !important; */
+    color: #1197EC !important;
+}
+
+.hamburger .line {
+    background-color: #1197ff !important;
+}
+
+.nav-link.active {
+    border-color: #1197ff !important;
+    color: #1197ff !important;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    background-color: red
+}
+
+.dataTables_wrapper .dataTables_paginate span .paginate_button.current {
+    border-color: #1197ff !important;
+    background-color: #1197ff !important;
+}
+
+.deznav .metismenu ul a.mm-active:before {
+    border-color: #1197ff !important;
+}
+
+.deznav .metismenu>li>a:hover>* {
+    color: #1197ff !important;
+}
+
+.sk-three-bounce .sk-child {
+    background-color: #1197ff !important;
+}
+
+[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .nav-control .hamburger .line {
+    background-color: #1197ff !important;
+}
+
+.nav-link:hover {
+    border-color: #1197ff !important;
+    color: #1197ff !important;
+}
+
+.btn-primary {
+    border-color: #1197ff !important;
+    background-color: #1197ff !important;
+}
+
+.btn-primary:hover {
+    border-color: #3183d4 !important;
+    background-color: #3183d4 !important;
+}
+
+.deznav .metismenu>li>a:hover {
+    background: rgba(17, 151, 255, 0.20) !important;
+    color: #1197ff !important;
+}
+
+a.copyrights {
+    color: #1197ff !important;
+}
+
+a.copyrights:hover {
+    color: #3183d4 !important;
+}
+
+.set {
+    background-color: #006eff;
+    color: #065d98;
+}
+
+.set:hover {
+    background-color: #1197ff;
+    color: #3183d4;
+}

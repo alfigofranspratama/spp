@@ -12,16 +12,42 @@
     <meta property="og:description" content="Zenix - Crypto Admin Dashboard" />
     <meta property="og:image" content="https://zenix.dexignzone.com/xhtml/social-image.png" />
     <meta name="format-detection" content="telephone=no">
-    <title>Login</title>
+    <title>SPP SMK NEgeri 4 Payakumbuh</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/') ?>images/favicon.png">
     <link href="<?= base_url('assets/') ?>vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>css/style.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <?= $script_captcha ?>
 
+    <style>
+        .btn-primary {
+            background-color: #065d98 !important;
+            border-color: #065d98 !important;
+            color: white !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #3183d4 !important;
+            border-color: #3183d4 !important;
+            color: #ddd !important;
+        }
+
+        a:hover {
+            color: #3183d4 !important;
+        }
+
+        a.text-primary {
+            color: #065d98 !important;
+        }
+
+        a.text-primary:hover {
+            color: #3183d4 !important;
+        }
+    </style>
 </head>
 
-<body class="vh-100" <?= $this->session->flashdata('message'); ?> >
+<body class="vh-100" <?= $this->session->flashdata('message'); ?>>
     <div class="authincation h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -31,17 +57,22 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <div class="text-center mb-3">
-                                        <img src="<?= base_url('assets/') ?>images/logo-full.png" alt="">
+                                        <img src="<?= base_url('assets/') ?>images/icon-navbar.png" height="100" alt="">
                                     </div>
                                     <h4 class="text-center mb-4">Sign in your account</h4>
                                     <form action="<?= base_url('auth') ?>" method="post">
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Username or Email Address</strong></label>
-                                            <input type="text" required name="username-email" class="form-control" placeholder="example@spp.com">
+                                            <input type="text" name="username-email" class="form-control" value="<?= set_value('username-email') ?>" placeholder="example@spp.com">
+                                            <?= form_error('username-email', '<small class="text-danger">', '</small>') ?>
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" name="password" class="form-control" placeholder="*******">
+                                            <input type="password" name="password" class="form-control" value="<?= set_value('password') ?>" placeholder="*******">
+                                            <?= form_error('password', '<small class="text-danger">', '</small>') ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <?= $captcha ?>
                                         </div>
                                         <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">
@@ -77,7 +108,7 @@
     <script src="<?= base_url('assets/') ?>js/custom.min.js"></script>
     <script src="<?= base_url('assets/') ?>js/deznav-init.js"></script>
     <script>
-        function swal(icn,titles,texts) {
+        function swal(icn, titles, texts) {
             Swal.fire(
                 titles,
                 texts,

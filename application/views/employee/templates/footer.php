@@ -10,7 +10,7 @@
         ***********************************-->
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2021</p>
+        <p>Copyright © Designed &amp; Developed by <a href="https://instagram.com/alfigofransp" target="_blank">Alfigo Frans Pratama</a> 2023</p>
     </div>
 </div>
 <!--**********************************

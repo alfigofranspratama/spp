@@ -41,6 +41,8 @@
 			$('#main-wrapper').toggleClass("menu-toggle");
 
 			$(".hamburger").toggleClass("is-active");
+
+			$(".judul").toggleClass("d-none");
 		});
 	}
   
