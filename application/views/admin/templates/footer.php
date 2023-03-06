@@ -48,7 +48,8 @@
 
 <!-- Apex Chart -->
 <script src="<?= base_url('assets/') ?>vendor/apexchart/apexchart.js"></script>
-
+<script src="<?= base_url('assets/') ?>vendor/moment/moment.min.js"></script>
+<script src="<?= base_url('assets/') ?>vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- Dashboard 1 -->
 <script src="<?= base_url('assets/') ?>js/dashboard/dashboard-1.js"></script>
 <script src="<?= base_url('assets/') ?>vendor/jquery-asColor/jquery-asColor.min.js"></script>
@@ -61,6 +62,9 @@
 <script src="<?= base_url('assets/') ?>vendor/select2/js/select2.full.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/plugins-init/select2-init.js"></script>
 <script src="<?= base_url('assets/') ?>vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+<!-- Pickdate -->
+<script src="<?= base_url('assets/') ?>js/plugins-init/bs-daterange-picker-init.js"></script>
+<script src="<?= base_url('assets/') ?>js/plugins-init/pickadate-init.js"></script>
 <script src="<?= base_url('assets/') ?>js/custom.js"></script>
 <script src="<?= base_url('assets/') ?>js/deznav-init.js"></script>
 <script>

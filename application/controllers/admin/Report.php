@@ -15,6 +15,7 @@ class Report extends CI_Controller
 
     public function index()
     {
+        $data['report'] = $this->db->query("SELECT * FROM tb_transaction a LEFT JOIN student_data b ON a.nisn = b.nisn LEFT JOIN tb_users c ON a.id_employee = c.id_users")->result();
         $data['title'] = "Report";
         admin('report', $data);
     }

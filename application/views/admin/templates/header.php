@@ -30,6 +30,12 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
     <link href="<?= base_url('assets/') ?>vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>css/style.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="<?= base_url('assets/') ?>vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="<?= base_url('assets/') ?>vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+    <!-- Pick date -->
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>vendor/pickadate/themes/default.css">
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>vendor/pickadate/themes/default.date.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>css/custom.css" rel="stylesheet">
 </head>
 

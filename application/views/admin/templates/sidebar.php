@@ -39,12 +39,12 @@
                             <span class="nav-text">Transaction</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="ai-icon" href="<?= base_url('admin/report') ?>">
                             <i class="flaticon-098-megaphone"></i>
                             <span class="nav-text">Report</span>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
