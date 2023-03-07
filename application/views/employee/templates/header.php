@@ -18,11 +18,11 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
     <meta property="og:description" content="Zenix - Crypto Admin Dashboard" />
     <meta property="og:image" content="https://zenix.dexignzone.com/xhtml/social-image.png" />
     <meta name="format-detection" content="telephone=no">
-    <title>SPP SMK NEgeri 4 Payakumbuh </title>
+    <title>SPP SMK Negeri 4 Payakumbuh </title>
     <!-- Datatable -->
     <link href="<?= base_url('assets/') ?>vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/') ?><?= base_url('assets/') ?>images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/') ?>images/icon.png">
     <link rel="stylesheet" href="<?= base_url('assets/') ?>vendor/select2/css/select2.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/') ?>vendor/chartist/css/chartist.min.css">
     <link href="<?= base_url('assets/') ?>vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="<?= base_url('employee/dashboard') ?>" class="brand-logo">
+            <a href="<?= base_url('employee/dashboard') ?>" class="brand-logo p-2">
                 <img src="<?= base_url('assets/images/icon-navbar.png') ?>" height="100%" class="" alt="">
                 <h4 class="judul biru ml-2 mt-1">SMKn 4 <br> Payakumbuh</h4>
             </a>

@@ -58,7 +58,7 @@
 <script src="<?= base_url('assets/') ?>vendor/select2/js/select2.full.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/plugins-init/select2-init.js"></script>
 <script src="<?= base_url('assets/') ?>vendor/sweetalert2/dist/sweetalert2.min.js"></script>
-<script src="<?= base_url('assets/') ?>js/custom.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/custom.js"></script>
 <script src="<?= base_url('assets/') ?>js/deznav-init.js"></script>
 <script>
     function swal(icn, titles, texts) {
