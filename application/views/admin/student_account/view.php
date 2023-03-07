@@ -30,7 +30,6 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -44,11 +43,6 @@
                                                     <td><?= $row->major ?></td>
                                                     <td><?= $row->address ?></td>
                                                     <td><?= $row->phone ?></td>
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <a href="<?= base_url('admin/transaction/pay/') . $row->nisn ?>" class="btn btn-primary shadow btn-xs sharp mr-1 w-100"><i class="fa fa-credit-card"></i></a>
-                                                        </div>
-                                                    </td>
                                                 </tr>
                                             <?php
                                             endforeach;
@@ -62,7 +56,6 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -92,7 +85,6 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -106,11 +98,6 @@
                                                     <td><?= $row->major ?></td>
                                                     <td><?= $row->address ?></td>
                                                     <td><?= $row->phone ?></td>
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <a href="<?= base_url('admin/transaction/pay/') . $row->nisn ?>" class="btn btn-primary shadow btn-xs sharp mr-1 w-100"><i class="fa fa-credit-card"></i></a>
-                                                        </div>
-                                                    </td>
                                                 </tr>
                                             <?php
                                             endforeach;
@@ -124,7 +111,6 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -154,7 +140,6 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -168,11 +153,6 @@
                                                     <td><?= $row->major ?></td>
                                                     <td><?= $row->address ?></td>
                                                     <td><?= $row->phone ?></td>
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <a href="<?= base_url('admin/transaction/pay/') . $row->nisn ?>" class="btn btn-primary shadow btn-xs sharp mr-1 w-100"><i class="fa fa-credit-card"></i></a>
-                                                        </div>
-                                                    </td>
                                                 </tr>
                                             <?php
                                             endforeach;
@@ -186,7 +166,6 @@
                                                 <th>Class Majors</th>
                                                 <th>Address</th>
                                                 <th>Phone Number</th>
-                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>

@@ -17,7 +17,7 @@ class Studentaccount extends CI_Controller {
         $data['eleventh'] = $this->db->query("SELECT * FROM tb_users c LEFT JOIN student_data a ON c.id_users = a.users_id LEFT JOIN tb_class b ON a.class_id = b.class_id WHERE b.class = '11' ORDER BY a.class_id ASC")->result();
         $data['twelfth'] = $this->db->query("SELECT * FROM tb_users c LEFT JOIN student_data a ON c.id_users = a.users_id LEFT JOIN tb_class b ON a.class_id = b.class_id WHERE b.class = '12' ORDER BY a.class_id ASC")->result();
         $data['title'] = "Student Account";
-        admin('transaction/view', $data);
+        admin('student_account/view', $data);
     }
 
 }

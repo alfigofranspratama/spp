@@ -42,6 +42,8 @@ class Student extends CI_Controller
             $data['class_id'] = $this->input->post('class');
             $data['phone'] = $this->input->post('phone');
             $data['address'] = $this->input->post('address');
+            $data['spp_id'] = $this->input->post('spp_id');
+            
 
             $this->Data_model->insert('student_data', $data);
             $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Student Added Successfully\',\'Ok to continue\')"');
@@ -70,6 +72,8 @@ class Student extends CI_Controller
             $data['class_id'] = $this->input->post('class');
             $data['phone'] = $this->input->post('phone');
             $data['address'] = $this->input->post('address');
+            $data['spp_id'] = $this->input->post('spp_id');
+            
 
             $this->Data_model->update('nisn', $nisn, 'student_data', $data);
             $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Student Updated Successfully\',\'Ok to continue\')"');

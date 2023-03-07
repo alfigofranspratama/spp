@@ -1942,6 +1942,31 @@ class Auth extends CI_Controller
             return TRUE;
         }
     }
+
+    public function changepassword()
+    {
+        $users = $this->session->userdata('users');
+        $users = $this->db->get_where('tb_users', ['id_users' => $users['id_users']])->row_array();
+        
+        $current_password = $this->input->post('current_password');
+        $new_password = $this->input->post('new_password');
+        $confirm_password = $this->input->post('confirm_password');
+
+        if (password_verify($current_password, $users['password'])) {
+            if ($new_password == $confirm_password) {
+                $data['password'] = password_hash($new_password, PASSWORD_DEFAULT);
+                $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Success\',\'Password Change Successfully\')"');
+                redirect(base_url($users['level'] . '/dashboard'));
+            } else {
+                $this->session->set_flashdata('message', 'onload="swal(\'error\',\'Error\',\'Password Confirm dont match\')"');
+                redirect(base_url($users['level'] .'/dashboard'));
+            }
+        } else {
+            $this->session->set_flashdata('message', 'onload="swal(\'error\',\'Error\',\'Current password wrong !\')"');
+            redirect(base_url($users['level'] . '/dashboard'));
+        }
+        
+    }
 }
 
 /* End of file Auth.php */

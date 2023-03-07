@@ -76,6 +76,25 @@
                                 <?= form_error('address', '<small class="text-danger">', '</small>') ?>
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-12">
+                                <label for="spp_id">Start SPP</label>
+                                <?php
+                                $spp = $this->db->get('tb_spp')->result();
+                                ?>
+                                <select name="spp_id" id="" class="form-control" required>
+                                    <option value="" selected disabled>- Select One -</option>
+                                    <?php
+                                    foreach ($spp as $row) :
+                                    ?>
+                                        <option <?php if($student['spp_id'] == $row->id_spp) echo "selected"; ?> value="<?= $row->id_spp ?>"><?= $row->year ?></option>
+                                    <?php
+                                    endforeach;
+                                    ?>
+                                </select>
+                                <?= form_error('spp_id', '<small class="text-danger">', '</small>') ?>
+                            </div>
+                        </div>
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
                 </div>
