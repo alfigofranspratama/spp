@@ -1,27 +1,12 @@
-<div class="row">
-    <div class="col-lg-12">
-        <div id="accordion-seven" class="accordion accordion-header-bg accordion-bordered">
-            <div class="accordion__item">
-                <div class="accordion__header accordion__header--primary btn-primary collapsed" data-toggle="collapse" data-target="#header-bg_collapseOne">
-                    <span class="accordion__header--icon"></span>
-                    <span class="accordion__header--text">Filter Report</span>
-                    <span class="accordion__header--indicator"></span>
-                </div>
-                <div id="header-bg_collapseOne" class="collapse accordion__body" data-parent="#accordion-seven">
-                    <div class="accordion__body--text bg-white">
-                        <form action="<?= base_url('admin/report') ?>" method="get">
-                            <div class="mb-3">
-                                <p class="mb-1">Pick Date Range</p>
-                                <input class="form-control input-daterange-datepicker" type="text" value="<?= $val ?>" name="daterange">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    tr>td {
+        padding: 5px;
+    }
+</style>
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -36,11 +21,10 @@
                     ?>
                     Reports
                 </h4>
-                <a href="<?= base_url('admin/report/export?daterange=') . $val ?>" class="btn btn-primary btn-sm ms-auto">Export Report</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table id="example" class="display" style="min-width: 845px">
+                    <table id="example" class="display" style="width:100%" border="1">
                         <thead>
                             <tr>
                                 <th>Paid Date</th>

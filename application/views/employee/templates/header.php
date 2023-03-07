@@ -153,15 +153,15 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
                     </div>
                     <div class="d-flex align-items-center">
                         <?php
-                        if ($this->uri->segment('2') == 'student' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('admin/student/add') . '" class="mr-1">+ Add New Student</a>';
-                        if ($this->uri->segment('2') == 'student' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/student') . '" class="mr-1"><- Back to Student data</a>';
-                        if ($this->uri->segment('2') == 'employee' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('admin/employee/add') . '" class="mr-1">+ Add New Employee</a>';
-                        if ($this->uri->segment('2') == 'employee' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/employee') . '" class="mr-1"><- Back to Employee data</a>';
-                        if ($this->uri->segment('2') == 'grade' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('admin/grade/add') . '" class="mr-1">+ Add New Grade</a>';
-                        if ($this->uri->segment('2') == 'grade' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/grade') . '" class="mr-1"><- Back to Grade data</a>';
-                        if ($this->uri->segment('2') == 'spp' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('admin/spp/add') . '" class="mr-1">+ Add New SPP</a>';
-                        if ($this->uri->segment('2') == 'spp' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/spp') . '" class="mr-1"><- Back to SPP data</a>';
-                        if ($this->uri->segment('2') == 'transaction' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('admin/transaction') . '" class="mr-1"><- Back to Transaction data</a>';
+                        if ($this->uri->segment('2') == 'student' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('employee/student/add') . '" class="mr-1">+ Add New Student</a>';
+                        if ($this->uri->segment('2') == 'student' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('employee/student') . '" class="mr-1"><- Back to Student data</a>';
+                        if ($this->uri->segment('2') == 'employee' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('employee/employee/add') . '" class="mr-1">+ Add New Employee</a>';
+                        if ($this->uri->segment('2') == 'employee' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('employee/employee') . '" class="mr-1"><- Back to Employee data</a>';
+                        if ($this->uri->segment('2') == 'grade' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('employee/grade/add') . '" class="mr-1">+ Add New Grade</a>';
+                        if ($this->uri->segment('2') == 'grade' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('employee/grade') . '" class="mr-1"><- Back to Grade data</a>';
+                        if ($this->uri->segment('2') == 'spp' && $this->uri->segment('3') == NULL) echo '<a href=" ' . base_url('employee/spp/add') . '" class="mr-1">+ Add New SPP</a>';
+                        if ($this->uri->segment('2') == 'spp' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('employee/spp') . '" class="mr-1"><- Back to SPP data</a>';
+                        if ($this->uri->segment('2') == 'transaction' && $this->uri->segment('3') != NULL) echo '<a href=" ' . base_url('employee/transaction') . '" class="mr-1"><- Back to Transaction data</a>';
                         ?>
                     </div>
                 </div>
