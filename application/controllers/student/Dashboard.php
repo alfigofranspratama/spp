@@ -13,7 +13,7 @@ class Dashboard extends CI_Controller {
     public function index()
     {
         $data['title'] = 'Dashboard';
-        siswa('dashboard', $data);
+        student('dashboard', $data);
     }
 
 }

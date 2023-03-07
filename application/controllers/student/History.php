@@ -19,7 +19,7 @@ class History extends CI_Controller {
         $data['class'] = $this->Data_model->getwhere('class_id',$data['student']['class_id'], 'tb_class');
         $data['spp'] = $this->Data_model->getwhere('id_spp', $data['student']['spp_id'], 'tb_spp');
         $data['title'] = 'History';
-        siswa('history/view', $data);
+        student('history/view', $data);
     }
 
     public function pdf_report($id)

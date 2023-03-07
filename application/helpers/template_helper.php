@@ -15,13 +15,13 @@ function employee($path, $data)
     $ci->load->view("employee/" . $path, $data);
     $ci->load->view('employee/templates/footer', $data);
 }
-function siswa($path, $data)
+function student($path, $data)
 {
     $ci = get_instance();
-    $ci->load->view('siswa/templates/header', $data);
-    $ci->load->view('siswa/templates/sidebar', $data);
-    $ci->load->view("siswa/" . $path, $data);
-    $ci->load->view('siswa/templates/footer', $data);
+    $ci->load->view('student/templates/header', $data);
+    $ci->load->view('student/templates/sidebar', $data);
+    $ci->load->view("student/" . $path, $data);
+    $ci->load->view('student/templates/footer', $data);
 }
 
 
