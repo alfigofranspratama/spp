@@ -77,8 +77,8 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-sm-12">
-                                <label for="spp_id">Start SPP</label>
+                            <div class="col-sm-6">
+                                <label for="spp_id">Entry Year</label>
                                 <?php
                                 $spp = $this->db->get('tb_spp')->result();
                                 ?>
@@ -87,12 +87,31 @@
                                     <?php
                                     foreach ($spp as $row) :
                                     ?>
-                                        <option <?php if($student['spp_id'] == $row->id_spp) echo "selected"; ?> value="<?= $row->id_spp ?>"><?= $row->year ?></option>
+                                        <option <?php if ($student['spp_id'] == $row->id_spp) echo "selected"; ?> value="<?= $row->id_spp ?>"><?= $row->year ?></option>
                                     <?php
                                     endforeach;
                                     ?>
                                 </select>
                                 <?= form_error('spp_id', '<small class="text-danger">', '</small>') ?>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="entry_month">Entry Month</label>
+                                <select name="entry_month" id="entry_month" class="dropdown-groups">
+                                    <option value="" selected disabled>-- Select One --</option>
+                                    <option <?php if ($student['entry_month'] == 1) echo "selected"; ?> value="1">January</option>
+                                    <option <?php if ($student['entry_month'] == 2) echo "selected"; ?> value="2">February</option>
+                                    <option <?php if ($student['entry_month'] == 3) echo "selected"; ?> value="3">March</option>
+                                    <option <?php if ($student['entry_month'] == 4) echo "selected"; ?> value="4">April</option>
+                                    <option <?php if ($student['entry_month'] == 5) echo "selected"; ?> value="5">May</option>
+                                    <option <?php if ($student['entry_month'] == 6) echo "selected"; ?> value="6">June</option>
+                                    <option <?php if ($student['entry_month'] == 7) echo "selected"; ?> value="7">July</option>
+                                    <option <?php if ($student['entry_month'] == 8) echo "selected"; ?> value="8">August</option>
+                                    <option <?php if ($student['entry_month'] == 9) echo "selected"; ?> value="9">September</option>
+                                    <option <?php if ($student['entry_month'] == 10) echo "selected"; ?> value="10">October</option>
+                                    <option <?php if ($student['entry_month'] == 11) echo "selected"; ?> value="11">November</option>
+                                    <option <?php if ($student['entry_month'] == 12) echo "selected"; ?> value="12">December</option>
+                                </select>
+                                <?= form_error('entry_month', '<small class="text-danger">', '</small>') ?>
                             </div>
                         </div>
                         <button class="btn btn-primary" type="submit">Submit</button>

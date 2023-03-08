@@ -96,7 +96,15 @@
                                             foreach ($history as $row) :
                                             ?>
                                                 <tr>
-                                                    <td><?= $row->name ?></td>
+                                                    <td>
+                                                        <?php
+                                                        if ($row->id_employee == 0) {
+                                                            echo "Xendit Payment";
+                                                        } else {
+                                                            echo $row->name;
+                                                        }
+                                                        ?>
+                                                    </td>
                                                     <td><?= $row->paid_date ?></td>
                                                     <td><?= $row->pay_month ?></td>
                                                     <td><?= $row->pay_year ?></td>

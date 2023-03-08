@@ -77,8 +77,8 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-sm-12">
-                                <label for="spp_id">Start SPP</label>
+                            <div class="col-sm-6">
+                                <label for="spp_id">Entry Year</label>
                                 <?php
                                 $spp = $this->db->get('tb_spp')->result();
                                 ?>
@@ -93,6 +93,25 @@
                                     ?>
                                 </select>
                                 <?= form_error('spp_id', '<small class="text-danger">', '</small>') ?>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="entry_month">Entry Month</label>
+                                <select name="entry_month" id="entry_month" class="dropdown-groups" required>
+                                    <option value="" selected disabled>-- Select One --</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                <?= form_error('entry_month', '<small class="text-danger">', '</small>') ?>
                             </div>
                         </div>
                         <button class="btn btn-primary" type="submit">Submit</button>

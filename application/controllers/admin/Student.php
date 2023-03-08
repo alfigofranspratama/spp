@@ -43,6 +43,7 @@ class Student extends CI_Controller
             $data['phone'] = $this->input->post('phone');
             $data['address'] = $this->input->post('address');
             $data['spp_id'] = $this->input->post('spp_id');
+            $data['entry_month'] = $this->input->post('entry_month');
             
 
             $this->Data_model->insert('student_data', $data);
@@ -58,6 +59,7 @@ class Student extends CI_Controller
         $this->form_validation->set_rules('class', 'Class', 'trim|required');
         $this->form_validation->set_rules('phone', 'Phone', 'trim|required');
         $this->form_validation->set_rules('address', 'Address', 'trim|required');
+        $this->form_validation->set_rules('entry_month', 'Entry Month', 'trim|required');
 
         if ($this->form_validation->run() == FALSE) {
             $data['ten'] = $this->Data_model->datawhere('class', '10', 'tb_class');
@@ -73,8 +75,8 @@ class Student extends CI_Controller
             $data['phone'] = $this->input->post('phone');
             $data['address'] = $this->input->post('address');
             $data['spp_id'] = $this->input->post('spp_id');
+            $data['entry_month'] = $this->input->post('entry_month');
             
-
             $this->Data_model->update('nisn', $nisn, 'student_data', $data);
             $this->session->set_flashdata('message', 'onload="swal(\'success\',\'Student Updated Successfully\',\'Ok to continue\')"');
             redirect(base_url('admin/student'));
