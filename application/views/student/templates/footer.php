@@ -60,6 +60,7 @@
 <script src="<?= base_url('assets/') ?>vendor/sweetalert2/dist/sweetalert2.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/custom.js"></script>
 <script src="<?= base_url('assets/') ?>js/deznav-init.js"></script>
+
 <script>
     function swal(icn, titles, texts) {
         Swal.fire(

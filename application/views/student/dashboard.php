@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header border-0 flex-wrap pb-0">
                 <div class="mb-3">
-                    <h4 class="fs-20 text-black">Payment Traffic</h4>
+                    <h4 class="fs-20 text-black">Payment Traffic (Soon)</h4>
                     <p class="mb-0 fs-12 text-black">The traffic is monthly student spp payments</p>
                 </div>
             </div>
@@ -15,7 +15,7 @@
     <div class="col-xl-3 col-xxl-4">
         <div class="card">
             <div class="card-header border-0 pb-0">
-                <h4 class="fs-20 text-black">SPP Statistic</h4>
+                <h4 class="fs-20 text-black">SPP Statistic (Soon)</h4>
             </div>
             <div class="card-body pb-0">
                 <div id="currentChart" class="current-chart"></div>
