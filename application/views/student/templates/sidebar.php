@@ -17,6 +17,12 @@
                             <span class="nav-text">History</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="ai-icon" href="<?= base_url('student/transaction') ?>">
+                            <i class="flaticon-008-credit-card"></i>
+                            <span class="nav-text">Transaction</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -76,7 +76,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header d-flex">
-                                <h4 class="card-title">History</h4>
+                                <h4 class="card-title">Transaction Details</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -88,12 +88,11 @@
                                                 <th>Pay Month</th>
                                                 <th>Pay Year</th>
                                                 <th>Pay Amount</th>
-                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            foreach ($history as $row) :
+                                            foreach ($pay as $row) :
                                             ?>
                                                 <tr>
                                                     <td><?= $row->name ?></td>
@@ -103,7 +102,7 @@
                                                     <td>Rp. <?= number_format($row->pay_amount, 0, ".", ".") ?></td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <a href="<?= base_url('student/history/pdf_report/') . $row->id_transaction ?>" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-file-text-o"></i></a>
+                                                            <a href="<?= base_url('employee/transaction/pdf_report/') . $row->id_transaction ?>" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-file-text-o"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
