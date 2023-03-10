@@ -15,6 +15,7 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
+        $data['history'] = $this->db->query("SELECT * FROM tb_transaction a LEFT JOIN tb_users b ON a.id_employee = b.id_users ORDER BY a.paid_date DESC LIMIT 5")->result();
         $data['title'] = "Dashboard";
         admin('dashboard', $data);
     }

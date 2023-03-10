@@ -113,7 +113,7 @@ $users = $this->Data_model->getwhere('id_users', $users['id_users'], 'tb_users')
                             </li>
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                    <img src="<?= base_url('assets/') ?>images/profile/pic1.jpg" width="20" alt="" />
+                                    <img src="<?= base_url('assets/') ?>images/icon-navbar.png" width="20" alt="" />
                                     <div class="header-info">
                                         <span><?= $users['name'] ?></span>
                                         <small><?= $users['level'] ?></small>

@@ -24,11 +24,9 @@
                                     <table id="example" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>NISN</th>
-                                                <th>NIS</th>
                                                 <th>Name</th>
-                                                <th>Class Majors</th>
-                                                <th>Address</th>
+                                                <th>Email Address</th>
+                                                <th>Username</th>
                                                 <th>Phone Number</th>
                                             </tr>
                                         </thead>
@@ -37,11 +35,9 @@
                                             foreach ($tenth as $row) :
                                             ?>
                                                 <tr>
-                                                    <td><?= $row->nisn ?></td>
-                                                    <td><?= $row->nis ?></td>
                                                     <td><?= $row->name ?></td>
-                                                    <td><?= $row->major ?></td>
-                                                    <td><?= $row->address ?></td>
+                                                    <td><?= $row->email_address ?></td>
+                                                    <td><?= $row->username ?></td>
                                                     <td><?= $row->phone ?></td>
                                                 </tr>
                                             <?php
@@ -50,11 +46,9 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>NISN</th>
-                                                <th>NIS</th>
                                                 <th>Name</th>
-                                                <th>Class Majors</th>
-                                                <th>Address</th>
+                                                <th>Email Address</th>
+                                                <th>Username</th>
                                                 <th>Phone Number</th>
                                             </tr>
                                         </tfoot>
@@ -79,11 +73,9 @@
                                     <table id="dup1" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>NISN</th>
-                                                <th>NIS</th>
                                                 <th>Name</th>
-                                                <th>Class Majors</th>
-                                                <th>Address</th>
+                                                <th>Email Address</th>
+                                                <th>Username</th>
                                                 <th>Phone Number</th>
                                             </tr>
                                         </thead>
@@ -92,11 +84,9 @@
                                             foreach ($eleventh as $row) :
                                             ?>
                                                 <tr>
-                                                    <td><?= $row->nisn ?></td>
-                                                    <td><?= $row->nis ?></td>
                                                     <td><?= $row->name ?></td>
-                                                    <td><?= $row->major ?></td>
-                                                    <td><?= $row->address ?></td>
+                                                    <td><?= $row->email_address ?></td>
+                                                    <td><?= $row->username ?></td>
                                                     <td><?= $row->phone ?></td>
                                                 </tr>
                                             <?php
@@ -105,11 +95,9 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>NISN</th>
-                                                <th>NIS</th>
                                                 <th>Name</th>
-                                                <th>Class Majors</th>
-                                                <th>Address</th>
+                                                <th>Email Address</th>
+                                                <th>Username</th>
                                                 <th>Phone Number</th>
                                             </tr>
                                         </tfoot>
@@ -134,11 +122,9 @@
                                     <table id="dup2" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>NISN</th>
-                                                <th>NIS</th>
                                                 <th>Name</th>
-                                                <th>Class Majors</th>
-                                                <th>Address</th>
+                                                <th>Email Address</th>
+                                                <th>Username</th>
                                                 <th>Phone Number</th>
                                             </tr>
                                         </thead>
@@ -147,11 +133,9 @@
                                             foreach ($twelfth as $row) :
                                             ?>
                                                 <tr>
-                                                    <td><?= $row->nisn ?></td>
-                                                    <td><?= $row->nis ?></td>
                                                     <td><?= $row->name ?></td>
-                                                    <td><?= $row->major ?></td>
-                                                    <td><?= $row->address ?></td>
+                                                    <td><?= $row->email_address ?></td>
+                                                    <td><?= $row->username ?></td>
                                                     <td><?= $row->phone ?></td>
                                                 </tr>
                                             <?php
@@ -160,11 +144,9 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>NISN</th>
-                                                <th>NIS</th>
                                                 <th>Name</th>
-                                                <th>Class Majors</th>
-                                                <th>Address</th>
+                                                <th>Email Address</th>
+                                                <th>Username</th>
                                                 <th>Phone Number</th>
                                             </tr>
                                         </tfoot>

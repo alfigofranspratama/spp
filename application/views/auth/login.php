@@ -78,7 +78,7 @@
                                             <div class="form-group">
                                             </div>
                                             <div class="form-group">
-                                                <a href="#">Forgot Password?</a>
+                                                <a href="#">Forgot Password? (Soon)</a>
                                             </div>
                                         </div>
                                         <div class="text-center">

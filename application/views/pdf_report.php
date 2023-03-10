@@ -48,7 +48,13 @@
                     </div>
                 </td>
                 <td style="text-align: right;">
-                    <?= $employee['name'] ?>
+                    <?php
+                    if ($employee == NULL) {
+                        echo "Xendit Payment";
+                    } else {
+                        $employee['name'];
+                    }
+                    ?>
                 </td>
             </tr>
         </table>
